@@ -13,6 +13,8 @@
     
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;  
+  # Turn on flakes
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   #home-manager
   users.users.eve.isNormalUser = true;
@@ -24,7 +26,7 @@
      	fortune
      ];
      
-     imports = [/home/ru/neovim/nixvim.nix];
+     imports = [/home/ru/dotfiles/config/nvim/nvim.nix];
 
 
 };
