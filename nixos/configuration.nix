@@ -26,7 +26,7 @@
      	fortune
      ];
      
-     imports = [/home/ru/dotfiles/config/nvim/nvim.nix];
+     imports = [./modules/nixvim/nixvim.nix];
 
 
 };

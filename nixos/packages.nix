@@ -5,6 +5,7 @@
 	
 	environment.systemPackages = with pkgs; [
 	#to be sorted
+	git
 	nerdfonts
 	discord
 	spotify
