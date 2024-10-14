@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
-     ./modules/nixvim/nixvim.nix
+     #./modules/nixvim/nixvim.nix
     ];
     
  
