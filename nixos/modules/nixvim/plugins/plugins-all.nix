@@ -6,6 +6,7 @@
 		./lsp.nix
 		./nix.nix
 		./mini.nix
+		./web-devicons.nix
 	];
 
 }
