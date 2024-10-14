@@ -1,57 +1,15 @@
-{ pkgs, lib, ... }:
-let
-  nixvim = import (builtins.fetchGit {
-    url = "https://github.com/nix-community/nixvim";
-    # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
-    ref = "nixos-24.05";
-  });
-in
+
 {
-  imports = [
-    # For home-manager
-    nixvim.homeManagerModules.nixvim
-    
-    
-  ];
+	imports = [
+		./plugins/plugins-all.nix
+	];
 
-  
-  
-   programs.nixvim = {
-    enable = true;
-    plugins.lightline.enable = true;
-   
-    extraPlugins = with pkgs.vimPlugins; [
-      nvim-tree-lua
-   
-    ];	
-    
-    extraConfigLua = ''
-    -- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+	programs.nixvim = {
+		enable = true;
+		plugins.nix.enable = true;
+		defaultEditor = true;
+		colorschemes.oxocarbon.enable = true;	
+	};
 
--- optionally enable 24-bit colour
-vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
--- OR setup with some options
-require("nvim-tree").setup({
-  sort = {
-    sorter = "case_sensitive",
-  },
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-})
-'';
-  };
-  
 }

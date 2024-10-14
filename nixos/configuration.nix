@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       <home-manager/nixos>
       ./packages.nix
+      ./modules/nixvim/nixvim.nix
     ];
     
  
@@ -26,7 +27,7 @@
      	fortune
      ];
      
-     imports = [./modules/nixvim/nixvim.nix];
+     #imports = [./modules/nixvim/nixvim.nix];
 
 
 };
