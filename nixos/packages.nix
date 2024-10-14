@@ -6,6 +6,7 @@
 	
 	environment.systemPackages = with pkgs; [
 	#to be sorted
+	vim
 	git
 	nerdfonts
 	discord
