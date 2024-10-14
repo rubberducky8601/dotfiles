@@ -8,9 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      <home-manager/nixos>
       ./packages.nix
-      ./modules/nixvim/nixvim.nix
+     ./modules/nixvim/nixvim.nix
     ];
     
  
@@ -19,18 +18,18 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   #home-manager
   users.users.eve.isNormalUser = true;
-  home-manager.users.ru = { pkgs, ... }: {
+ # home-manager.users.ru = { pkgs, ... }: {
   
      
-     home.stateVersion = "24.05";
-     home.packages = with pkgs; [
-     	fortune
-     ];
+   #  home.stateVersion = "24.05";
+    # home.packages = with pkgs; [
+    # 	fortune
+    # ];
      
      #imports = [./modules/nixvim/nixvim.nix];
 
 
-};
+#};
 
   
   

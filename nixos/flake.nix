@@ -38,6 +38,11 @@
         inputs.nixvim.nixosModules.nixvim
       ];
     };
+    
+    homeConfigurations.ru = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.${system};
+      modules = [ ./dotfiles/home-manager/home.nix ];
+    };
 
   };
 }
