@@ -5,7 +5,7 @@
 		./neotree.nix
 		./lsp.nix
 		./nix.nix
-
+		./mini.nix
 	];
 
 }
