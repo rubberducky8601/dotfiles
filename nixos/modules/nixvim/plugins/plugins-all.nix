@@ -7,6 +7,7 @@
 		./nix.nix
 		./mini.nix
 		./web-devicons.nix
+		#./lualine.nix
 	];
 
 }

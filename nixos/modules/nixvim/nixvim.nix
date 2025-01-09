@@ -8,7 +8,7 @@
 		enable = true;
 		
 		defaultEditor = true;
-		colorschemes.oxocarbon.enable = true;	
+		colorschemes.catppuccin.enable = true;	
 	};
 
 

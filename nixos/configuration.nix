@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./packages.nix
-     #./modules/nixvim/nixvim.nix
+     ./modules/nixvim/nixvim.nix
     ];
     
  
@@ -107,15 +107,30 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
+    programs.fish.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ru = {
     isNormalUser = true;
     description = "ru";
+    shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
+    webex
     ];
   };
+  
+  
+  programs.hyprland.enable = true; # enable Hyprland
+
+  environment.systemPackages = [
+    # ... other packages
+    pkgs.kitty # required for the default Hyprland config
+  ];
+
+  # Optional, hint Electron apps to use Wayland:
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
