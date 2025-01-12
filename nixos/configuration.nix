@@ -112,24 +112,13 @@
   users.users.ru = {
     isNormalUser = true;
     description = "ru";
-    shell = pkgs.fish;
+    #shell = pkgs.fish;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
-    webex
+
     ];
   };
-  
-  
-  programs.hyprland.enable = true; # enable Hyprland
-
-  environment.systemPackages = [
-    # ... other packages
-    pkgs.kitty # required for the default Hyprland config
-  ];
-
-  # Optional, hint Electron apps to use Wayland:
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
   
 
   # Enable automatic login for the user.

@@ -6,11 +6,12 @@
 	
 	environment.systemPackages = with pkgs; [
 	#to be sorted
-	webex
+	
 	vim
 	git
-	#nerdfonts
+
 	discord
+	#webex
 	spotify
 	wget
 	screenfetch
@@ -22,9 +23,9 @@
 	
 	#coding
 	gnome-boxes
-	quickemu
 	#quartus-prime-lite
 	vscode
+	valgrind
 	jdk21_headless
 	xorg.libX11
 	libGL
@@ -34,7 +35,7 @@
 	gdb
 	pwndbg
 	pwntools
-	libgccjit
+	
 	];
 
 	 #environment.variables.LM_LICENSE_FILE = "/home/ru/Documents/LR-194472_License.dat";
